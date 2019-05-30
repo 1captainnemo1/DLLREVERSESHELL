@@ -9,6 +9,8 @@ The project comprises of:
 <p><b>. The DLL C code mingw_dll.c </b></p>
 <p><b>. The Loader file loader.c , that will invoke a web delivery of the DLL ,to the target machine, load the DLL in the runtime, producing the decoy program for the victim on the foreground, and spawning a connect back reverse shell (powershell) to the attacker, in the back ground </b></p>
 
+<p><b><i> Phase 1 : </b></i></p>
+
 Place the mingwdll.h and mingw_dll.c in the same folder and compile using :
 
 <b>i686-w64-mingw32-gcc -Wall -shared mingw_dll.c -o calc_helper.dll -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc </b>
@@ -20,7 +22,7 @@ File Description:
 calc_helper.dll: PE32 executable (DLL) (console) Intel 80386 (stripped to external PDB), for MS Windows
 </b>
 
-<b><i> Phase 2 </b></i>
+<p><b><i> Phase 2 : </b></i></p>
 Compile the loader.c using <b> i686-w64-mingw32-gcc loader.c -o improved_calc.exe </b>
 This will create the PE32 executable improved_calc.exe.
 
