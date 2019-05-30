@@ -1,7 +1,10 @@
 # DLLREVERSESHELL
-A CUSTOM CODED FUD DLL, CODED IN C , WHEN LOADED , VIA A DECOY WEB-DELIVERY MODULE( FIRING A DECOY PROGRAM), WILL GIVE A REVERSE SHELL (POWERSHELL) FROM THE VICTIM MACHINE TO THE ATTACKER CONSOLE , OVER LAN AND WAN.
+<.bA CUSTOM CODED FUD DLL, CODED IN C , WHEN LOADED , VIA A DECOY WEB-DELIVERY MODULE( FIRING A DECOY PROGRAM), WILL GIVE A REVERSE SHELL (POWERSHELL) FROM THE VICTIM MACHINE TO THE ATTACKER CONSOLE , OVER LAN AND WAN.
+</b>
 
 The project comprises of:
+
+
 <b>. A custom C header file, mingwdll.h </b>
 <b>. The Dll C code mingw_dll.c </b>
 <b>. The Loader file loader.c , that will invoke a web delivery of the DLL ,to the target machine, load the DLL in the runtime, producing the decoy program for the victim on the foreground, and spawning a connect back reverse shell (powershell) to the attacker, in the back ground </b>
