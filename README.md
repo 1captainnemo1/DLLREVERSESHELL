@@ -6,7 +6,7 @@ The project comprises of:
 
 
 <p><b>. A custom C header file, mingwdll.h </b></p>
-<p><b>. The Dll C code mingw_dll.c </b></p>
+<p><b>. The DLL C code mingw_dll.c </b></p>
 <p><b>. The Loader file loader.c , that will invoke a web delivery of the DLL ,to the target machine, load the DLL in the runtime, producing the decoy program for the victim on the foreground, and spawning a connect back reverse shell (powershell) to the attacker, in the back ground </b></p>
 
 Place the mingwdll.h and mingw_dll.c in the same folder and compile using :
