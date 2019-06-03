@@ -2,7 +2,7 @@
 
 #ifndef MINGW_DLL_H__
 #define MINGW_DLL_H__
-#define CONNIP "192.168.225.197"
+#define CONNIP "192.168.225.196"
 #define CONNPORT 8080
 #pragma comment(lib, "Ws2_32.lib")
 #define DEF_BUFF 2048
