@@ -84,3 +84,11 @@ Compile the C program , ft_clie.c using
   <b>https://youtu.be/KJOwew96pqw</b>
   
   # POST EXPLOITATION MODULE
+
+<p><b>
+The Screenshot module , (screenshot.cpp) , will take screenshots of the remote machine and the .bmp files can be transferred over lan / wan to the attacker machine.
+</p></b>
+
+<p><b>
+ Compilation Instruction: i686-w64-mingw32-g++ screenshot.cpp -o ss.exe -static-libstdc++ -static-libgcc -lgdi32
+ </p></b>
